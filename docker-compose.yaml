@@ -1,0 +1,13 @@
+version: '3'
+services:
+  game:
+    container_name: game
+    image: nginx
+    # build: .
+    volumes:
+      # - ./web/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./dist://usr/share/nginx/html
+    ports:
+      # - "8080:80"
+      - "80:80"
+    # command: ['/usr/sbin/nginx']
